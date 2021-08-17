@@ -1,0 +1,51 @@
+{
+  "name": "2021-01-coronavirus-tracker-react",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://www.gannett-cdn.com/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.2.2",
+    "d3": "^6.3.1",
+    "d3-axis": "^2.0.0",
+    "d3-ease": "^2.0.0",
+    "d3-format": "^2.0.0",
+    "d3-geo": "^2.0.1",
+    "d3-scale": "^3.2.3",
+    "d3-shape": "^2.0.0",
+    "d3-time": "^2.0.0",
+    "d3-time-format": "^3.0.0",
+    "google-spreadsheet": "^3.1.15",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "topojson-client": "^3.1.0",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

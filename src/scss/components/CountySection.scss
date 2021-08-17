@@ -1,0 +1,89 @@
+@import '../values.scss';
+
+#g-pod-county-data {
+
+  .g-pod-toggle {
+    // margin-top: 25px;
+  }
+
+  table {
+
+    border-collapse: collapse;
+  width: 100%;
+    * {
+      font-family: $dnj-sans;
+    }
+
+    thead {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      -ms-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      font: inherit;
+      vertical-align: baseline;
+
+      tr {
+        border-top: none;
+      }
+
+      th {
+
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        vertical-align: bottom;
+        text-align: left;
+        line-height: 1.15em;
+        padding: 10px 5px;
+        text-align: right;
+        white-space: nowrap;
+
+      }
+    }
+
+    tr {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      -ms-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      border-top: 1px solid #eee;
+      text-size-adjust: 100%;
+      font: inherit;
+      vertical-align: baseline;
+
+      td {
+        line-height: 1.15em;
+        font-size: 14px;
+        padding: 10px 5px;
+        text-align: right;
+        font-weight: 300;
+
+        &.g-name {
+          text-align: left;
+          font-weight: 700;
+          white-space: nowrap;
+        }
+      }
+
+      td {
+        &.g-cases-per, &.g-cases-latest, &.g-deaths-per, &.g-deaths-latest {
+          color: #666;
+        }
+      }
+
+      .g-cases-latest {
+        border-right: 1px solid #ddd;
+        padding-right: 15px;
+      }
+    }
+
+  }
+}

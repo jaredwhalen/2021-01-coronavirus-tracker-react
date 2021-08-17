@@ -1,0 +1,345 @@
+@import './values.scss';
+@import './tooltip.scss';
+
+.g-pod-chart-label {
+  margin-left: 15px;
+  font-family: $dnj-sans;
+
+
+  &.flush {
+    margin-left: 0;
+  }
+
+  h4 {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 16px !important;
+  }
+}
+
+.g-pod-chart-legend {
+  display: flex;
+  font-family: $dnj-sans;
+
+  .g-pod-chart-legend-item {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    .g-pod-chart-legend-item-symbol {
+      margin-right: 5px;
+
+      &.square {
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        opacity: 0.4;
+      }
+
+      &.line {
+        width: 12px;
+        height: 2px;
+      }
+
+      &.cases {
+        background-color: $cases;
+      }
+
+      &.testing {
+        background-color: $tests;
+      }
+
+      &.hospitalizations {
+        background-color: $hospitalizations;
+      }
+
+      &.vaccinations {
+        background-color: $vaccinations;
+      }
+
+      &.dash.vaccinations {
+        width: 14px;
+        height: 0;
+        border-top: 3px dotted nth($grays, 5);
+        background-color: transparent;
+      }
+
+      &.deaths {
+        background-color: $deaths;
+      }
+
+      &.county_cases,
+      &.county_deaths {
+        &.newcastle {
+          background-color: nth($blues, 3);
+        }
+
+        &.kent {
+          background-color: nth($blues, 5);
+        }
+
+        &.sussex {
+          background-color: nth($blues, 7);
+        }
+      }
+    }
+  }
+
+  &.scale {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    align-items: baseline;
+
+    .g-pod-chart-legend-item {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 0;
+      flex-basis: 100%;
+
+      &:first-of-type {
+        div {
+          text-align: left;
+        }
+      }
+
+      .g-pod-chart-legend-item-symbol {
+        flex-basis: 100%;
+        height: 10px;
+        margin-right: 0;
+      }
+
+      div {
+        font-size: 12px;
+        font-weight: 300;
+        color: #666;
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.g-chart {
+  width: 100%;
+  position: relative;
+
+  .domain {
+    display: none;
+  }
+
+  text {
+    font-size: 15px;
+    color: nth($grays,5);
+  }
+
+  text.labels {
+    font-size: 12px;
+    color: #999999;
+    font-weight: bold;
+    pointer-events: none;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .axis,
+  .gridlines {
+    line,
+    path {
+      stroke: #ddd;
+    }
+  }
+
+  .x.axis {
+    * {
+      text-anchor: middle;
+      font-size: 12px;
+    }
+
+    g {
+      display: none;
+      // &:first-of-type {
+      //   display: block;
+      // }
+      // &:last-of-type {
+      //   display: block;
+      // }
+      &:nth-child(2n) {
+        display: block;
+      }
+    }
+    // .tick {
+    //   &:last-of-type {
+    //     text {
+    //       text-anchor: end;
+    //     }
+    //   }
+    // }
+  }
+
+  .y {
+    .tick:first-of-type {
+      display: none;
+    }
+  }
+}
+
+svg.g-chart {
+  .chartGroup {
+
+    .focus circle {
+      &.change {
+        display: none;
+      }
+    }
+    &.cases {
+      path.area {
+        fill: rgba(nth($blues, 7), 0.25);
+      }
+
+      rect.bar {
+        fill: rgba(nth($blues, 7), 1);
+      }
+
+      path.line {
+        stroke-width: 2px;
+        stroke: rgba(nth($blues, 5), 1);
+      }
+
+      .focus circle {
+        fill: rgba(nth($blues, 5), 1);
+      }
+    }
+
+    &.deaths {
+      path.area {
+        fill: rgba(nth($grays, 7), 0.25);
+      }
+
+      rect.bar {
+        fill: rgba(nth($grays, 7), 1);
+      }
+
+      path.line {
+        stroke-width: 2px;
+        stroke: rgba(nth($grays, 3), 1);
+      }
+
+      .focus circle {
+        fill: rgba(nth($grays, 3), 1);
+      }
+    }
+
+    &.testing {
+      path.area {
+        fill: rgba(nth($yellows, 7), 0.25);
+      }
+
+      rect.bar {
+        fill: rgba(nth($yellows, 7), 1);
+      }
+
+      path.line {
+        stroke-width: 2px;
+        stroke: rgba(nth($yellows, 5), 1);
+      }
+
+      .focus circle {
+        fill: rgba(nth($yellows, 5), 1);
+      }
+    }
+
+    &.hospitalizations {
+      path.area {
+        fill: rgba(nth($reds, 7), 0.25);
+      }
+
+      rect.bar {
+        fill: rgba(nth($reds, 7), 1);
+      }
+
+      path.line {
+        stroke-width: 2px;
+        stroke: rgba(nth($reds, 5), 1);
+      }
+
+      .focus circle {
+        fill: rgba(nth($reds, 5), 1);
+      }
+    }
+
+    &.vaccinations {
+      rect.bar {
+        fill: rgba(nth($greens, 7), 1);
+      }
+
+      path.line {
+        stroke-width: 2px;
+        stroke: rgba(nth($greens, 5), 1);
+      }
+
+      path.area {
+        fill: rgba(nth($greens, 7), 0.25);
+      }
+
+      // path.line:nth-of-type(2) {
+      //   stroke-width: 2px;
+      //   stroke-dasharray: 2;
+      //   stroke: rgba(nth($grays, 5), 1);
+      // }
+
+      path.area:nth-of-type(3) {
+        fill: rgba(nth($greens, 7), 0.25);
+      }
+
+      path.line:nth-of-type(4) {
+        stroke-width: 2px;
+        stroke: rgba(nth($greens, 5), 1);
+      }
+
+      .focus circle:nth-of-type(1)  {
+        fill: rgba(nth($grays, 5), 1);
+      }
+
+      .focus circle:nth-of-type(2)  {
+        fill: rgba(nth($greens, 5), 1);
+      }
+    }
+
+    &.county_cases,
+    &.county_deaths {
+      path.line {
+        stroke-width: 2px;
+      }
+
+      path.line:nth-of-type(1) {
+        stroke: nth($blues, 3);
+      }
+
+      path.line:nth-of-type(2) {
+        stroke: nth($blues, 5);
+      }
+
+      path.line:nth-of-type(3) {
+        stroke: nth($blues, 7);
+      }
+
+      .focus circle:nth-of-type(1) {
+        fill: nth($blues, 3);
+      }
+
+      .focus circle:nth-of-type(2) {
+        fill: nth($blues, 5);
+      }
+
+      .focus circle:nth-of-type(3) {
+        fill: nth($blues, 7);
+      }
+    }
+  }
+}

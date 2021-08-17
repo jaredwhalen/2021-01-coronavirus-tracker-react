@@ -1,0 +1,78 @@
+<% if (process.env.NODE_ENV !== 'production') { %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+
+  <link href="https://www.gannett-cdn.com/usat-storytelling/lab-microservices-master/static/css/in-depth/base.css" rel="stylesheet" />
+  <link href="https://www.gannett-cdn.com/usat-storytelling/lab-microservices-master/static/css/in-depth/light.css" rel="stylesheet" />
+</head>
+
+<body>
+  <style>
+    #fauxHeader {
+      height: 55px;
+      width: 100%;
+      border-bottom: 1px solid #DDDDDD;
+      position: sticky;
+      top: 0px;
+      z-index: 9999;
+      background-color: white;
+    }
+
+    --theme-color: #009bff;
+    --theme-color-text: #fff;
+    /*--font-color: #000;*/
+  </style>
+
+  <article>
+
+    <div id='fauxHeader'></div>
+
+
+    <div class="article-inner theme-light" data-theme="light" data-asset-id="2931377001">
+
+      <section id="topper-2866760001" class="in-depth-topper-section">
+        <header class="topper full-width-container topper--no-media topper--show-caption topper--text-center" data-asset-id="2866760001" id="topper-2866760001" data-theme="light" data-layout="flat">
+          <div class="topper__inner">
+            <div class="topper__media">
+              <div class="topper__overlay"></div>
+            </div>
+            <div class="topper__meta">
+              <h1 class="topper__headline">Tracking coronavirus cases in Delaware</h1>
+              <div class="topper__byline">Jared Whalen, Delaware News Journal</div>
+              <story-timestamp class="topper__timestamp" publish-date="2020-03-19T22:11:36Z" update-date="2020-10-23T19:04:58Z" article-top="" data-module-loaded="true">Updated 3:04 p.m. EDT Oct. 23, 2020</story-timestamp>
+            </div>
+          </div>
+        </header>
+      </section>
+
+
+
+      <p>Delaware Online has been tracking coronavirus cases, deaths and hospitalizations statewide since the first case was identified in Delaware in mid-March. Experts believe that the true number of cases is likely much higher than what has been
+        confirmed. Testing is limited nationally, including in Delaware. Plus, not all those who contract coronavirus will experience symptoms, though they still could spread it to others.</p>
+
+      <p>This tracker has since been updated to monitor the coronavirus vaccine rollout. </p>
+
+      <p>The state's Division of Public Health releases updates on the number of cases, deaths, hospitalizations and recoveries throughout the day. Delaware Online is updating these numbers in real time as the state releases them.</p>
+
+
+
+      <div class="full-width-container" id="asset-12345">
+        <% } %>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <% if (process.env.NODE_ENV !== 'production') { %>
+      </div>
+
+
+    </div>
+  </article>
+</body>
+
+</html>
+<% } %>

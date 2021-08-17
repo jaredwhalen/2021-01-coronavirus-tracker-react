@@ -1,0 +1,141 @@
+@import '../values.scss';
+
+#g-pod-zip-code-data {
+  .g-search {
+    max-width: 250px;
+    width: 100%;
+    outline: none;
+    color: #3b3b3b;
+    text-align: left;
+    border: 1px solid #dddddd;
+    padding: 5px 15px 5px 10px;
+    background-color: white;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: #777;
+    @include tablet {
+      font-size: 16px;
+      max-width: 250px;
+      margin-left: 15px;
+    }
+  }
+
+  table {
+    // border-collapse: collapse;
+    border-collapse: separate;
+    /* Don't collapse */
+    border-spacing: 0;
+    width: calc(100%);
+    overflow: auto;
+    @include tablet {
+      width: calc(100% - 30px);
+    }
+
+    * {
+      font-family: $dnj-sans;
+    }
+
+    thead {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      -ms-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      font: inherit;
+      vertical-align: baseline;
+
+      tr {
+        border-top: none;
+      }
+
+      th {
+        position: sticky;
+        background: #ffffff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        top: 0;
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0;
+        vertical-align: bottom;
+        text-align: left;
+        line-height: 1.15em;
+        padding: 10px 5px;
+        text-align: right;
+        white-space: nowrap;
+      }
+    }
+
+    tr {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      -ms-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      font: inherit;
+      vertical-align: baseline;
+
+      &:first-of-type {
+        td {
+          border-top: none;
+        }
+      }
+
+      td {
+        line-height: 1.15em;
+        font-size: 14px;
+        padding: 10px 5px;
+        text-align: right;
+        font-weight: 300;
+        vertical-align: middle;
+        border-top: 1px solid #eee;
+
+        &.g-cell-subdued {
+          color: #666;
+        }
+      }
+
+      .g-name {
+        text-align: left;
+        font-weight: 700;
+
+
+        .g-cell-city {
+          font-weight: 300;
+          font-style: italic;
+          font-size: 12px;
+          display: table-caption;
+          width: max-content;
+        }
+      }
+
+      .g-cell-divide {
+        border-right: 1px solid #ddd;
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+.g-standalone-button {
+  margin: 15px 0px;
+  border: 1px solid #dddddd;
+  padding: 5px 15px;
+  background-color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #777;
+  background-color: #E9EBEE;
+  font-weight: bold;
+  color: #222;
+  width: calc(100% - 30px);
+}

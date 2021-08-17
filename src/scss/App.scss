@@ -1,0 +1,50 @@
+@import './values.scss';
+
+
+
+
+#g-wrapper-2021-01-coronavirus-tracker-react {
+  width: 100%;
+  text-align: center;
+}
+
+.cases {
+  color: $cases;
+}
+
+.tests {
+  color: $tests;
+}
+
+.hospitalized {
+  color: $hospitalizations;
+}
+
+.vaccinations, .administered {
+  color: $vaccinations;
+}
+
+
+.deaths {
+  color: $deaths
+}
+
+.g-main-container {
+  width: 100%;
+  background-color: rgba(nth($blues, 1), 0.1);
+  border-top: 1px solid rgba(nth($blues, 1), 0.15);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.article-inner {
+  p:not(.g-intro-p) {
+    display: none;
+  }
+}
+
+p.g-intro-p {
+  margin-left: calc(var(--article-padding-horiz) - 5px);
+  margin-right: calc(var(--article-padding-horiz) - 5px);
+}

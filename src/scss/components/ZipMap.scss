@@ -1,0 +1,42 @@
+@import '../values.scss';
+
+.g-polygon {
+  stroke: white;
+
+  &:hover {
+    stroke: #222;
+    stroke-width: 2px;
+  }
+}
+
+.g-city-marker {
+  fill: #222;
+  stroke: white;
+  stroke-width: 2px;
+  pointer-events: none;
+}
+
+.g-city-label {
+  font-family: $dnj-sans;
+  dominant-baseline: middle;
+  fill: #222;
+  pointer-events: none;
+
+  &.halo {
+    stroke: #fff;
+    stroke-width: 2.5;
+    stroke-opacity: 0.8;
+  }
+}
+
+
+#g-pod-zip-code-data {
+  svg {
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}
