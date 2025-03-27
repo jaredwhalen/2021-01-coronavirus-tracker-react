@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/css/main.0fd19af6.chunk.css",
+    "main.js": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/js/main.9cec67a3.chunk.js",
+    "main.js.map": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/js/main.9cec67a3.chunk.js.map",
+    "runtime-main.js": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/js/runtime-main.d7782646.js",
+    "runtime-main.js.map": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/js/runtime-main.d7782646.js.map",
+    "static/js/2.ceca6395.chunk.js": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/js/2.ceca6395.chunk.js",
+    "static/js/2.ceca6395.chunk.js.map": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/js/2.ceca6395.chunk.js.map",
+    "index.html": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/index.html",
+    "static/css/main.0fd19af6.chunk.css.map": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/css/main.0fd19af6.chunk.css.map",
+    "static/js/2.ceca6395.chunk.js.LICENSE.txt": "/delaware-online/storytelling-embeds/master/projects/2021-01-coronavirus-tracker-react/static/js/2.ceca6395.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7782646.js",
+    "static/js/2.ceca6395.chunk.js",
+    "static/css/main.0fd19af6.chunk.css",
+    "static/js/main.9cec67a3.chunk.js"
+  ]
+}
